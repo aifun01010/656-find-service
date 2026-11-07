@@ -1,0 +1,704 @@
+{
+  "hubs": {
+    "csse": "https://www.swd.gov.hk/tc/pubsvc/elderly/elderly_info/susa/su_csse/index.html",
+    "ccse": "https://www.swd.gov.hk/tc/pubsvc/elderly/elderly_info/susa/su_ccse/",
+    "mss": "https://www.swd.gov.hk/tc/pubsvc/medical/cat_medical/medicalsoc/",
+    "ifsc": "https://www.swd.gov.hk/tc/pubsvc/family/cat_family/ifs/ifscbydistrict/index.html"
+  },
+  "links": {
+    "csse": [
+      "https://www.swd.gov.hk/storage/asset/section/733/CWSI_Service_boundary_of_Elderly_Centre.pdf",
+      "https://www.swd.gov.hk/storage/asset/section/733/CWSI_Service_boundary_of_Elderly_Centre.xls",
+      "https://www.swd.gov.hk/storage/asset/section/733/tc/EW_Service_boundary_of_Elderly_Centre.pdf",
+      "https://www.swd.gov.hk/storage/asset/section/733/tc/EW_Service_boundary_of_Elderly_Centre.xls",
+      "https://www.swd.gov.hk/storage/asset/section/733/tc/KT_Service_boundary_of_Elderly_Centre.pdf",
+      "https://www.swd.gov.hk/storage/asset/section/733/tc/KT_Service_boundary_of_Elderly_Centre.xls",
+      "https://www.swd.gov.hk/storage/asset/section/733/WTSSK_Service_boundary_of_Elderly_Centre.pdf",
+      "https://www.swd.gov.hk/storage/asset/section/733/WTSSK_Service_boundary_of_Elderly_Centre.xls",
+      "https://www.swd.gov.hk/storage/asset/section/733/KCYTM_Service_boundary_of_Elderly_Centre.pdf",
+      "https://www.swd.gov.hk/storage/asset/section/733/KCYTM_Service_boundary_of_Elderly_Centre.xls",
+      "https://www.swd.gov.hk/storage/asset/section/733/tc/SSP_Service_boundary_of_Elderly_Centre.pdf",
+      "https://www.swd.gov.hk/storage/asset/section/733/tc/SSP_Service_boundary_of_Elderly_Centre.xls",
+      "https://www.swd.gov.hk/storage/asset/section/733/tc/ST_Service_boundary_of_Elderly_Centre.pdf",
+      "https://www.swd.gov.hk/storage/asset/section/733/tc/ST_Service_boundary_of_Elderly_Centre.xls",
+      "https://www.swd.gov.hk/storage/asset/section/733/TPN_Service_boundary_of_Elderly_Centre_updated%20as%20at%202_10_2026.pdf",
+      "https://www.swd.gov.hk/storage/asset/section/733/TPN_Service_boundary_of_Elderly_Centre_updated%20as%20at%202_10_2026.xls",
+      "https://www.swd.gov.hk/storage/asset/section/733/tc/YL_Service_boundary_of_Elderly_Centre.pdf",
+      "https://www.swd.gov.hk/storage/asset/section/733/tc/YL_Service_boundary_of_Elderly_Centre.xlsx",
+      "https://www.swd.gov.hk/storage/asset/section/733/TWKwT_Service_boundary_of_Elderly_Centre.pdf",
+      "https://www.swd.gov.hk/storage/asset/section/733/TWKwT_Service_boundary_of_Elderly_Centre.xls",
+      "https://www.swd.gov.hk/storage/asset/section/733/TM_Service_boundary_of_Elderly_Centre.pdf",
+      "https://www.swd.gov.hk/storage/asset/section/733/TM_Service_boundary_of_Elderly_Centre.xlsx",
+      "https://www.swd.gov.hk/storage/asset/section/733/tc/STE/Support%20Teams%20for%20the%20Elderly_service%20boundary_TC.pdf"
+    ],
+    "ccse": [
+      "https://www.swd.gov.hk/storage/asset/section/734/en/List%20of%20Home%20Care%20Services%20Teams_TC_Eng%20(as%20at%2020%20October%202026).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/734/en/List%20of%20Home%20Care%20Services%20Teams_TC_Eng%20(as%20at%2020%20October%202026).xlsx",
+      "https://www.swd.gov.hk/storage/asset/section/734/tc/Service_Boundary_of_HCST_(w_e_f_%201%20April%202026)_TC.pdf",
+      "https://www.swd.gov.hk/storage/asset/section/734/tc/Service_Boundary_of_HCST_(w_e_f_%201%20April%202026)_TC.doc",
+      "https://www.swd.gov.hk/storage/asset/section/734/en/List%20of%20Home%20Care%20and%20Support%20Services%20Teams_TC_Eng%20(as%20at%2016%20Oct%202026).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/734/en/List%20of%20Home%20Care%20and%20Support%20Services%20Teams_TC_Eng%20(as%20at%2016%20Oct%202026).xlsx",
+      "https://www.swd.gov.hk/storage/asset/section/734/tc/Service_Boundary_of_HCS_for_FEPs_by_HCSST_HK%20(including%20Islands)_TC%20(as%20at%2013_7_2026).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/734/tc/Service_Boundary_of_HCS_for_FEPs_by_HCSST_HK%20(including%20Islands)_TC%20(as%20at%2013_7_2026).xls",
+      "https://www.swd.gov.hk/storage/asset/section/734/tc/Service_Boundary_of_HCS_for_FEPs_by_HCSST_KLN%20(including%20Sai%20Kung)_TC%20(as%20at%203_8_2026).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/734/tc/Service_Boundary_of_HCS_for_FEPs_by_HCSST_KLN%20(including%20Sai%20Kung)_TC%20(as%20at%203_8_2026).xls",
+      "https://www.swd.gov.hk/storage/asset/section/734/tc/Service_Boundary_of_HCS_for_FEPs_by_HCSST_NT%20(excluding%20Islands%20%26%20Sai%20Kung)_TC%20(as%20at%2013_7_2026).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/734/tc/Service_Boundary_of_HCS_for_FEPs_by_HCSST_NT%20(excluding%20Islands%20%26%20Sai%20Kung)_TC%20(as%20at%2013_7_2026).xls",
+      "https://www.swd.gov.hk/storage/asset/section/734/tc/Service%20Boundary%20of%20HCSST%20of%20HSS_TC%20(26%20October%202026).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/734/tc/Service%20Boundary%20of%20HCSST%20of%20HSS_TC%20(26%20October%202026).doc",
+      "https://www.swd.gov.hk/storage/asset/section/734/List_of_DE_DCU_(01_Apr_2026)_with_EHS_r.pdf",
+      "https://www.swd.gov.hk/storage/asset/section/734/List_of_DE_DCU_(01_Apr_2026)_with_EHS_r.xlsx",
+      "https://www.swd.gov.hk/storage/asset/section/734/List_of_DEs_DCUs_with_designated_day_respite_places_20260401_r.pdf",
+      "https://www.swd.gov.hk/storage/asset/section/734/List_of_DEs_DCUs_with_designated_day_respite_places_20260401_r.xlsx",
+      "https://www.swd.gov.hk/storage/asset/section/734/DE_Boundary_(01_Apr_2026).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/734/DE_Boundary_(01_Apr_2026).xlsx"
+    ],
+    "mss": [
+      "https://www.swd.gov.hk/storage/asset/section/290/tc/MSSU-SWD_Chi_102026.pdf",
+      "https://www.swd.gov.hk/storage/asset/section/290/tc/MSSU-SWD_Chi_102026.docx",
+      "https://www.swd.gov.hk/storage/asset/section/290/tc/MSSU-HA_Chi_082025.pdf",
+      "https://www.swd.gov.hk/storage/asset/section/290/tc/MSSU-HA_Chi_082025.docx"
+    ],
+    "ifsc": [
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/C%26IIFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/HSIFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/AIFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/CMAC%20G%26JIFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/Caritas%20IFSC-Aberdeen_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/NAAC%20TCISC_Service%20Boundary%20(Jul%202025).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/HKSKH%20TCIS_Service%20Boundary%20(Aug%202026).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/CBIFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/QBIFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/CW(W)IFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/CW(E)IFSC_Service%20Boundary%20(July%202026).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/HKFWS%20NPIFSC_Service%20Boundary%20(Oct%202024)_r.pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/Caritas%20IFSC-%20SKW_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/SJS%20WCIFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/KPIFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/SPIFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/LTIFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/NTKIFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/CFSC%20Family%20Energizer%20IFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/HKFWS%20SLIFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/HKFWS%20YTIFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/SKIFSC_Service%20Boundary%20(Feb%202026).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/TKO(E)IFSC_Service%20Boundary%20(Jul%202025).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/TKO(N)IFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/TWSIFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/WTSIFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/HKFWS_TKO(S)IFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/Caritas%20IFSC-TT_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/KaiTIFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/MTWIFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/TKWIFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/YMTIFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/HKCYS%20HHIFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/YMMSS%20MKIFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/HKCS%20Family%20Networks%20IFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/CSWIFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/THTIFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/HKFWS%20SSP(W)IFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/ISSHK%20SSP(S)IFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/HKCS%20Family%20Ties%20IFSC_Service%20Boundary%20(Oct%202024)_r_20250730.pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/ST(N)IFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/ST(S)IFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/MOS(N)IFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/MOS(S)IFSC_Service%20Boundary%20(May%202026).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/Caritas%20IFSC-ST_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/TP(S)IFSC_Service%20Boundary%20(Mar%202026).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/TP(N)IFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/SSIFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/FLIFSC_Service%20Boundary%20(Oct%202024)_rev.pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/Caritas%20IFSC-Fanling_Service%20Boundary%20(Oct%202024)_rev.pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/YL(E)IFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/YL(C)IFSC_Service%20Boundary%20(Feb%202026).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/TSWIFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/ISSHK%20TSW(N)IFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/Caritas%20IFSC-TSW_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/TWGHs%20LLIFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/TW(W)IFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/KwC(E)IFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/KwC(W)IFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/TY(N)IFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/TY(S)IFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/Caritas%20IFSC-TW(E)_Service%20Boundary%20(Oct%202024)(1).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/HKFWS%20KwC(S)IFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/TM(S)IFSC_Service%20Boundary%20(Aug%202025).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/TM(E)IFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/TM(W)IFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/Caritas%20IFSC-TM_Service%20Boundary%20(Oct%202024).pdf"
+    ]
+  },
+  "files": {
+    "https://www.swd.gov.hk/storage/asset/section/290/tc/MSSU-HA_Chi_082025.docx": {
+      "lastModified": "Mon, 03 Aug 2026 08:15:59 GMT",
+      "etag": null,
+      "contentLength": 24539
+    },
+    "https://www.swd.gov.hk/storage/asset/section/290/tc/MSSU-HA_Chi_082025.pdf": {
+      "lastModified": "Mon, 03 Aug 2026 08:15:59 GMT",
+      "etag": null,
+      "contentLength": 128314
+    },
+    "https://www.swd.gov.hk/storage/asset/section/290/tc/MSSU-SWD_Chi_102026.docx": {
+      "lastModified": "Tue, 06 Oct 2026 02:12:50 GMT",
+      "etag": null,
+      "contentLength": 43063
+    },
+    "https://www.swd.gov.hk/storage/asset/section/290/tc/MSSU-SWD_Chi_102026.pdf": {
+      "lastModified": "Tue, 06 Oct 2026 02:12:50 GMT",
+      "etag": null,
+      "contentLength": 245246
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/AIFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 253103
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/C%26IIFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 337038
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/CBIFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 366882
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/CFSC%20Family%20Energizer%20IFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 235913
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/CMAC%20G%26JIFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 272900
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/CSWIFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 304630
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/CW(E)IFSC_Service%20Boundary%20(July%202026).pdf": {
+      "lastModified": "Fri, 24 Jul 2026 02:14:09 GMT",
+      "etag": null,
+      "contentLength": 201295
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/CW(W)IFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 219508
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/Caritas%20IFSC-%20SKW_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 286079
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/Caritas%20IFSC-Aberdeen_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 271037
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/Caritas%20IFSC-Fanling_Service%20Boundary%20(Oct%202024)_rev.pdf": {
+      "lastModified": "Thu, 10 Apr 2025 08:09:41 GMT",
+      "etag": null,
+      "contentLength": 283910
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/Caritas%20IFSC-ST_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 242219
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/Caritas%20IFSC-TM_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 172866
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/Caritas%20IFSC-TSW_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 228485
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/Caritas%20IFSC-TT_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 270869
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/Caritas%20IFSC-TW(E)_Service%20Boundary%20(Oct%202024)(1).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 275595
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/FLIFSC_Service%20Boundary%20(Oct%202024)_rev.pdf": {
+      "lastModified": "Thu, 10 Apr 2025 08:09:41 GMT",
+      "etag": null,
+      "contentLength": 232443
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/HKCS%20Family%20Networks%20IFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 306265
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/HKCS%20Family%20Ties%20IFSC_Service%20Boundary%20(Oct%202024)_r_20250730.pdf": {
+      "lastModified": "Wed, 30 Jul 2025 08:10:05 GMT",
+      "etag": null,
+      "contentLength": 277580
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/HKCYS%20HHIFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 271991
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/HKFWS%20KwC(S)IFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 207914
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/HKFWS%20NPIFSC_Service%20Boundary%20(Oct%202024)_r.pdf": {
+      "lastModified": "Thu, 10 Apr 2025 02:03:47 GMT",
+      "etag": null,
+      "contentLength": 284111
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/HKFWS%20SLIFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 114703
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/HKFWS%20SSP(W)IFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 236647
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/HKFWS%20YTIFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 253220
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/HKFWS_TKO(S)IFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 184592
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/HKSKH%20TCIS_Service%20Boundary%20(Aug%202026).pdf": {
+      "lastModified": "Mon, 31 Aug 2026 02:11:42 GMT",
+      "etag": null,
+      "contentLength": 91354
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/HSIFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 314446
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/ISSHK%20SSP(S)IFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 236411
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/ISSHK%20TSW(N)IFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 124529
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/KPIFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 216224
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/KaiTIFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:20:06 GMT",
+      "etag": null,
+      "contentLength": 389682
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/KwC(E)IFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 194435
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/KwC(W)IFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 299123
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/LTIFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 189373
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/MOS(N)IFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 223693
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/MOS(S)IFSC_Service%20Boundary%20(May%202026).pdf": {
+      "lastModified": "Thu, 28 May 2026 02:07:35 GMT",
+      "etag": null,
+      "contentLength": 242689
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/MTWIFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 392760
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/NAAC%20TCISC_Service%20Boundary%20(Jul%202025).pdf": {
+      "lastModified": "Mon, 28 Jul 2025 08:08:02 GMT",
+      "etag": null,
+      "contentLength": 199775
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/NTKIFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 265587
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/QBIFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 254890
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/SJS%20WCIFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 357601
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/SKIFSC_Service%20Boundary%20(Feb%202026).pdf": {
+      "lastModified": "Mon, 23 Feb 2026 08:12:23 GMT",
+      "etag": null,
+      "contentLength": 175997
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/SPIFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 179313
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/SSIFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 296017
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/ST(N)IFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 322872
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/ST(S)IFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 202706
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/THTIFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 283986
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/TKO(E)IFSC_Service%20Boundary%20(Jul%202025).pdf": {
+      "lastModified": "Mon, 07 Jul 2025 02:10:54 GMT",
+      "etag": null,
+      "contentLength": 225689
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/TKO(N)IFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 155574
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/TKWIFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 283884
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/TM(E)IFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 427212
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/TM(S)IFSC_Service%20Boundary%20(Aug%202025).pdf": {
+      "lastModified": "Fri, 01 Aug 2025 08:09:43 GMT",
+      "etag": null,
+      "contentLength": 275487
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/TM(W)IFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 206907
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/TP(N)IFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 258064
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/TP(S)IFSC_Service%20Boundary%20(Mar%202026).pdf": {
+      "lastModified": "Fri, 06 Mar 2026 02:07:34 GMT",
+      "etag": null,
+      "contentLength": 336844
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/TSWIFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 129984
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/TW(W)IFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 415587
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/TWGHs%20LLIFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 474127
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/TWSIFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 261003
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/TY(N)IFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 218620
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/TY(S)IFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 177963
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/WTSIFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 162947
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/YL(C)IFSC_Service%20Boundary%20(Feb%202026).pdf": {
+      "lastModified": "Wed, 04 Feb 2026 08:07:41 GMT",
+      "etag": null,
+      "contentLength": 339098
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/YL(E)IFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 549934
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/YMMSS%20MKIFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 296281
+    },
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/YMTIFSC_Service%20Boundary%20(Oct%202024).pdf": {
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+      "etag": null,
+      "contentLength": 270863
+    },
+    "https://www.swd.gov.hk/storage/asset/section/733/CWSI_Service_boundary_of_Elderly_Centre.pdf": {
+      "lastModified": "Wed, 15 Oct 2025 02:07:47 GMT",
+      "etag": null,
+      "contentLength": 310675
+    },
+    "https://www.swd.gov.hk/storage/asset/section/733/CWSI_Service_boundary_of_Elderly_Centre.xls": {
+      "lastModified": "Wed, 15 Oct 2025 02:07:47 GMT",
+      "etag": null,
+      "contentLength": 65024
+    },
+    "https://www.swd.gov.hk/storage/asset/section/733/KCYTM_Service_boundary_of_Elderly_Centre.pdf": {
+      "lastModified": "Wed, 15 Jan 2025 08:24:14 GMT",
+      "etag": null,
+      "contentLength": 459622
+    },
+    "https://www.swd.gov.hk/storage/asset/section/733/KCYTM_Service_boundary_of_Elderly_Centre.xls": {
+      "lastModified": "Wed, 15 Jan 2025 08:24:14 GMT",
+      "etag": null,
+      "contentLength": 101888
+    },
+    "https://www.swd.gov.hk/storage/asset/section/733/TM_Service_boundary_of_Elderly_Centre.pdf": {
+      "lastModified": "Tue, 15 Apr 2025 08:15:01 GMT",
+      "etag": null,
+      "contentLength": 206509
+    },
+    "https://www.swd.gov.hk/storage/asset/section/733/TM_Service_boundary_of_Elderly_Centre.xlsx": {
+      "lastModified": "Tue, 15 Apr 2025 08:15:01 GMT",
+      "etag": null,
+      "contentLength": 18220
+    },
+    "https://www.swd.gov.hk/storage/asset/section/733/TPN_Service_boundary_of_Elderly_Centre_updated%20as%20at%202_10_2026.pdf": {
+      "lastModified": "Tue, 06 Oct 2026 08:10:53 GMT",
+      "etag": null,
+      "contentLength": 369003
+    },
+    "https://www.swd.gov.hk/storage/asset/section/733/TPN_Service_boundary_of_Elderly_Centre_updated%20as%20at%202_10_2026.xls": {
+      "lastModified": "Tue, 06 Oct 2026 08:10:53 GMT",
+      "etag": null,
+      "contentLength": 80384
+    },
+    "https://www.swd.gov.hk/storage/asset/section/733/TWKwT_Service_boundary_of_Elderly_Centre.pdf": {
+      "lastModified": "Tue, 15 Jul 2025 08:04:04 GMT",
+      "etag": null,
+      "contentLength": 412344
+    },
+    "https://www.swd.gov.hk/storage/asset/section/733/TWKwT_Service_boundary_of_Elderly_Centre.xls": {
+      "lastModified": "Tue, 15 Jul 2025 08:04:04 GMT",
+      "etag": null,
+      "contentLength": 87552
+    },
+    "https://www.swd.gov.hk/storage/asset/section/733/WTSSK_Service_boundary_of_Elderly_Centre.pdf": {
+      "lastModified": "Fri, 20 Jun 2025 08:07:48 GMT",
+      "etag": null,
+      "contentLength": 341285
+    },
+    "https://www.swd.gov.hk/storage/asset/section/733/WTSSK_Service_boundary_of_Elderly_Centre.xls": {
+      "lastModified": "Fri, 20 Jun 2025 08:07:48 GMT",
+      "etag": null,
+      "contentLength": 70656
+    },
+    "https://www.swd.gov.hk/storage/asset/section/733/tc/EW_Service_boundary_of_Elderly_Centre.pdf": {
+      "lastModified": "Tue, 28 Oct 2025 08:08:48 GMT",
+      "etag": null,
+      "contentLength": 477688
+    },
+    "https://www.swd.gov.hk/storage/asset/section/733/tc/EW_Service_boundary_of_Elderly_Centre.xls": {
+      "lastModified": "Tue, 28 Oct 2025 08:08:48 GMT",
+      "etag": null,
+      "contentLength": 83456
+    },
+    "https://www.swd.gov.hk/storage/asset/section/733/tc/KT_Service_boundary_of_Elderly_Centre.pdf": {
+      "lastModified": "Fri, 30 Oct 2026 08:11:03 GMT",
+      "etag": null,
+      "contentLength": 251816
+    },
+    "https://www.swd.gov.hk/storage/asset/section/733/tc/KT_Service_boundary_of_Elderly_Centre.xls": {
+      "lastModified": "Fri, 30 Oct 2026 08:11:03 GMT",
+      "etag": null,
+      "contentLength": 62464
+    },
+    "https://www.swd.gov.hk/storage/asset/section/733/tc/SSP_Service_boundary_of_Elderly_Centre.pdf": {
+      "lastModified": "Mon, 02 Nov 2026 08:36:19 GMT",
+      "etag": null,
+      "contentLength": 360357
+    },
+    "https://www.swd.gov.hk/storage/asset/section/733/tc/SSP_Service_boundary_of_Elderly_Centre.xls": {
+      "lastModified": "Mon, 02 Nov 2026 08:36:19 GMT",
+      "etag": null,
+      "contentLength": 72192
+    },
+    "https://www.swd.gov.hk/storage/asset/section/733/tc/STE/Support%20Teams%20for%20the%20Elderly_service%20boundary_TC.pdf": {
+      "lastModified": "Wed, 02 Sep 2026 08:17:14 GMT",
+      "etag": null,
+      "contentLength": 220017
+    },
+    "https://www.swd.gov.hk/storage/asset/section/733/tc/ST_Service_boundary_of_Elderly_Centre.pdf": {
+      "lastModified": "Fri, 31 Jul 2026 02:10:35 GMT",
+      "etag": null,
+      "contentLength": 293860
+    },
+    "https://www.swd.gov.hk/storage/asset/section/733/tc/ST_Service_boundary_of_Elderly_Centre.xls": {
+      "lastModified": "Fri, 31 Jul 2026 02:10:35 GMT",
+      "etag": null,
+      "contentLength": 70144
+    },
+    "https://www.swd.gov.hk/storage/asset/section/733/tc/YL_Service_boundary_of_Elderly_Centre.pdf": {
+      "lastModified": "Mon, 13 Jul 2026 08:12:34 GMT",
+      "etag": null,
+      "contentLength": 432340
+    },
+    "https://www.swd.gov.hk/storage/asset/section/733/tc/YL_Service_boundary_of_Elderly_Centre.xlsx": {
+      "lastModified": "Mon, 13 Jul 2026 08:12:34 GMT",
+      "etag": null,
+      "contentLength": 29636
+    },
+    "https://www.swd.gov.hk/storage/asset/section/734/DE_Boundary_(01_Apr_2026).pdf": {
+      "lastModified": "Wed, 01 Apr 2026 08:11:09 GMT",
+      "etag": null,
+      "contentLength": 548439
+    },
+    "https://www.swd.gov.hk/storage/asset/section/734/DE_Boundary_(01_Apr_2026).xlsx": {
+      "lastModified": "Wed, 01 Apr 2026 08:11:09 GMT",
+      "etag": null,
+      "contentLength": 40140
+    },
+    "https://www.swd.gov.hk/storage/asset/section/734/List_of_DE_DCU_(01_Apr_2026)_with_EHS_r.pdf": {
+      "lastModified": "Tue, 21 Jul 2026 08:14:11 GMT",
+      "etag": null,
+      "contentLength": 627507
+    },
+    "https://www.swd.gov.hk/storage/asset/section/734/List_of_DE_DCU_(01_Apr_2026)_with_EHS_r.xlsx": {
+      "lastModified": "Tue, 21 Jul 2026 08:14:11 GMT",
+      "etag": null,
+      "contentLength": 43570
+    },
+    "https://www.swd.gov.hk/storage/asset/section/734/List_of_DEs_DCUs_with_designated_day_respite_places_20260401_r.pdf": {
+      "lastModified": "Tue, 21 Jul 2026 08:14:11 GMT",
+      "etag": null,
+      "contentLength": 373764
+    },
+    "https://www.swd.gov.hk/storage/asset/section/734/List_of_DEs_DCUs_with_designated_day_respite_places_20260401_r.xlsx": {
+      "lastModified": "Tue, 21 Jul 2026 08:14:11 GMT",
+      "etag": null,
+      "contentLength": 24017
+    },
+    "https://www.swd.gov.hk/storage/asset/section/734/en/List%20of%20Home%20Care%20Services%20Teams_TC_Eng%20(as%20at%2020%20October%202026).pdf": {
+      "lastModified": "Wed, 21 Oct 2026 02:11:50 GMT",
+      "etag": null,
+      "contentLength": 192196
+    },
+    "https://www.swd.gov.hk/storage/asset/section/734/en/List%20of%20Home%20Care%20Services%20Teams_TC_Eng%20(as%20at%2020%20October%202026).xlsx": {
+      "lastModified": "Wed, 21 Oct 2026 02:11:50 GMT",
+      "etag": null,
+      "contentLength": 20349
+    },
+    "https://www.swd.gov.hk/storage/asset/section/734/en/List%20of%20Home%20Care%20and%20Support%20Services%20Teams_TC_Eng%20(as%20at%2016%20Oct%202026).pdf": {
+      "lastModified": "Fri, 16 Oct 2026 08:07:27 GMT",
+      "etag": null,
+      "contentLength": 379369
+    },
+    "https://www.swd.gov.hk/storage/asset/section/734/en/List%20of%20Home%20Care%20and%20Support%20Services%20Teams_TC_Eng%20(as%20at%2016%20Oct%202026).xlsx": {
+      "lastModified": "Fri, 16 Oct 2026 08:07:27 GMT",
+      "etag": null,
+      "contentLength": 38303
+    },
+    "https://www.swd.gov.hk/storage/asset/section/734/tc/Service%20Boundary%20of%20HCSST%20of%20HSS_TC%20(26%20October%202026).doc": {
+      "lastModified": "Mon, 26 Oct 2026 08:10:09 GMT",
+      "etag": null,
+      "contentLength": 313344
+    },
+    "https://www.swd.gov.hk/storage/asset/section/734/tc/Service%20Boundary%20of%20HCSST%20of%20HSS_TC%20(26%20October%202026).pdf": {
+      "lastModified": "Mon, 26 Oct 2026 08:10:09 GMT",
+      "etag": null,
+      "contentLength": 833821
+    },
+    "https://www.swd.gov.hk/storage/asset/section/734/tc/Service_Boundary_of_HCST_(w_e_f_%201%20April%202026)_TC.doc": {
+      "lastModified": "Mon, 30 Mar 2026 02:19:25 GMT",
+      "etag": null,
+      "contentLength": 103424
+    },
+    "https://www.swd.gov.hk/storage/asset/section/734/tc/Service_Boundary_of_HCST_(w_e_f_%201%20April%202026)_TC.pdf": {
+      "lastModified": "Mon, 30 Mar 2026 02:19:25 GMT",
+      "etag": null,
+      "contentLength": 339826
+    },
+    "https://www.swd.gov.hk/storage/asset/section/734/tc/Service_Boundary_of_HCS_for_FEPs_by_HCSST_HK%20(including%20Islands)_TC%20(as%20at%2013_7_2026).pdf": {
+      "lastModified": "Mon, 13 Jul 2026 02:13:31 GMT",
+      "etag": null,
+      "contentLength": 319689
+    },
+    "https://www.swd.gov.hk/storage/asset/section/734/tc/Service_Boundary_of_HCS_for_FEPs_by_HCSST_HK%20(including%20Islands)_TC%20(as%20at%2013_7_2026).xls": {
+      "lastModified": "Mon, 13 Jul 2026 02:13:32 GMT",
+      "etag": null,
+      "contentLength": 28803072
+    },
+    "https://www.swd.gov.hk/storage/asset/section/734/tc/Service_Boundary_of_HCS_for_FEPs_by_HCSST_KLN%20(including%20Sai%20Kung)_TC%20(as%20at%203_8_2026).pdf": {
+      "lastModified": "Tue, 04 Aug 2026 02:15:40 GMT",
+      "etag": null,
+      "contentLength": 453841
+    },
+    "https://www.swd.gov.hk/storage/asset/section/734/tc/Service_Boundary_of_HCS_for_FEPs_by_HCSST_KLN%20(including%20Sai%20Kung)_TC%20(as%20at%203_8_2026).xls": {
+      "lastModified": "Tue, 04 Aug 2026 02:15:41 GMT",
+      "etag": null,
+      "contentLength": 37780992
+    },
+    "https://www.swd.gov.hk/storage/asset/section/734/tc/Service_Boundary_of_HCS_for_FEPs_by_HCSST_NT%20(excluding%20Islands%20%26%20Sai%20Kung)_TC%20(as%20at%2013_7_2026).pdf": {
+      "lastModified": "Mon, 13 Jul 2026 02:13:33 GMT",
+      "etag": null,
+      "contentLength": 413125
+    },
+    "https://www.swd.gov.hk/storage/asset/section/734/tc/Service_Boundary_of_HCS_for_FEPs_by_HCSST_NT%20(excluding%20Islands%20%26%20Sai%20Kung)_TC%20(as%20at%2013_7_2026).xls": {
+      "lastModified": "Mon, 13 Jul 2026 02:13:34 GMT",
+      "etag": null,
+      "contentLength": 47624704
+    }
+  }
+}
