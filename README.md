@@ -2,7 +2,7 @@
 
 輸入屋苑、樓宇、醫院或院舍，查找資助安老服務該聯絡的單位。屋苑和樓宇會當居家，醫院會當醫務社工，院舍會當綜合家庭服務中心。這是非官方查詢工具，不是社會福利署、醫院管理局或任何資助機構的官方網站。
 
-之後若放上 Cloudflare Pages，專案名稱可用 `find-service`，網址會是 `find-service.pages.dev`。建置輸出是網站根路徑 `/`，不用另設 Vite `base`。
+Live 網站在 <https://find-service-wod.pages.dev>。`find-service.pages.dev` 已被佔用，所以 Live 使用 `find-service-wod.pages.dev`。建置輸出仍是網站根路徑 `/`，不用另設 Vite `base`。
 
 ## 點樣用
 
@@ -65,7 +65,7 @@ python3 scripts/build_directory.py --geocode
 
 地圖圖磚來自 OpenStreetMap。
 
-## 每月巡查來源
+## 平日來源巡查
 
 `scripts/check_sources.py` 會下載社署四個公開頁面，核對上面的 PDF／Excel／Word 連結是否仍與 `scripts/source-manifest.json` 一致。連結沒變、但同一個網址後面的檔案被換走時，腳本會對每個檔發 HTTP HEAD（HEAD 失敗才改為只讀標頭的 GET），比較 `Last-Modified`、`ETag` 和 `Content-Length`。回應完全沒有這些標頭就跳過，不會每晚誤報；上次有標頭、今次全部消失則算異常。它只出報告，不會下載檔案內容、不會改名冊，也不會部署。
 
@@ -74,14 +74,14 @@ python3 scripts/check_sources.py
 python3 -m unittest discover -s scripts -p 'test_*.py'
 ```
 
-有新增、消失，或同一網址的標頭有變時，程式以狀態碼 1 結束，方便別人的每月排程發告警。確認新檔可用之後，先更新清單（連同標頭基準）再重建資料：
+有新增、消失，或同一網址的標頭有變時，程式以狀態碼 1 結束，方便外面的排程發告警。確認新檔可用之後，先更新清單（連同標頭基準）再重建資料：
 
 ```bash
 python3 scripts/check_sources.py --write-manifest
 python3 scripts/build_directory.py --geocode
 ```
 
-排程本身（例如每月一日）由網站負責人設定。這個儲存庫沒有代為建立雲端排程。
+現時的輕量巡查是每個平日黃昏約 21:00（香港時間），在這個儲存庫以外運行。做法與 `scripts/check_sources.py` 相同，包括對檔案發 HTTP HEAD，用 `Last-Modified`、`ETag` 和 `Content-Length` 偵測同一個網址後面的檔案有冇被換走。有變動時只通知負責人，不會自動重建名冊，也不會自動更改 Live。負責人如有需要，可自行再排檢查。這個儲存庫沒有代為建立雲端排程。
 
 ## 限制
 
@@ -101,4 +101,4 @@ npm install
 npm run dev
 ```
 
-Open <http://127.0.0.1:43123>. Find Service helps carers look up a subsidised elderly-service contact. An estate or building is treated as living at home, a hospital as medical social work, and a residential care home as an integrated family service centre. It is **not** an official Social Welfare Department, Hospital Authority, or agency site. Embedded data comes from the public SWD lists for elderly centres, medical social work units, integrated family service centres, and home support teams across Hong Kong. Matches are by place name, not a legal reading of street-number boundaries. Not legal or welfare advice. If a place is not in the bundled directory, the page may ask OpenStreetMap Nominatim for a district and labels those suggestions as outside this site's directory. `python3 scripts/check_sources.py` reports whether the public source links changed and whether a file behind the same URL was replaced, using HTTP Last-Modified, ETag, and Content-Length. Schedule that monthly yourself. `python3 -m unittest discover -s scripts -p 'test_*.py'` checks the comparison logic without contacting SWD.
+Open <http://127.0.0.1:43123>. The live site is <https://find-service-wod.pages.dev> (`find-service.pages.dev` was already taken). The build still outputs the site root `/`. Find Service helps carers look up a subsidised elderly-service contact. An estate or building is treated as living at home, a hospital as medical social work, and a residential care home as an integrated family service centre. It is **not** an official Social Welfare Department, Hospital Authority, or agency site. Embedded data comes from the public SWD lists for elderly centres, medical social work units, integrated family service centres, and home support teams across Hong Kong. Matches are by place name, not a legal reading of street-number boundaries. Not legal or welfare advice. If a place is not in the bundled directory, the page may ask OpenStreetMap Nominatim for a district and labels those suggestions as outside this site's directory. `python3 scripts/check_sources.py` reports whether the public source links changed and whether a file behind the same URL was replaced, using HTTP Last-Modified, ETag, and Content-Length. The active light check runs each weekday evening (about 21:00 HKT) outside this repo, in that same style, including those HEAD headers for file-swap detection. A change notifies the owner only and never auto-rebuilds the directory or changes Live. The owner schedules further checks as needed. This repository does not define a cloud cron. `python3 -m unittest discover -s scripts -p 'test_*.py'` checks the comparison logic without contacting SWD.
