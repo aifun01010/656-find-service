@@ -26,6 +26,45 @@ describe("directory integrity", () => {
       expect(unit.keywords).not.toContain("醫院")
     }
   })
+
+  it("uses the SWD spelling 采頤 for Rhythm Garden", () => {
+    const unit = directory.units.find((item) => item.address.includes("采頤花園十二座"))
+    expect(unit?.name).toBe("路德會采頤長者中心")
+    expect(unit?.serviceArea).toContain("采頤花園、啟鑽苑")
+    expect(unit?.name).not.toContain("彩頤")
+    expect(unit?.serviceArea).not.toContain("彩頤")
+  })
+
+  it("keeps every service-area block from repeated Yuen Long centre rows", () => {
+    const caritas = directory.units.filter((unit) => unit.name === "明愛元朗長者社區中心")
+    expect(caritas).toHaveLength(1)
+    expect(caritas[0]?.serviceArea).toContain("元朗市區")
+    expect(caritas[0]?.serviceArea).toContain("天水圍區")
+    expect(caritas[0]?.serviceArea).toContain("十八鄉郊區")
+    expect(caritas[0]?.serviceArea).toContain("屏山鄉郊區")
+
+    const tin = directory.units.filter((unit) => unit.name === "田家炳長者鄰舍中心")
+    expect(tin).toHaveLength(1)
+    expect(tin[0]?.serviceArea).toContain("朗屏邨")
+    expect(tin[0]?.serviceArea).toContain("安樂路")
+
+    const wong = directory.units.filter((unit) => unit.name === "王東源夫人長者地區中心")
+    expect(wong).toHaveLength(2)
+    const urban = wong.find((unit) => unit.address.includes("西菁街"))
+    const kamTin = wong.find((unit) => unit.address.includes("1及21號"))
+    expect(urban?.serviceArea).toContain("元朗市區")
+    expect(urban?.serviceArea).toContain("十八鄉鄉郊區")
+    expect(urban?.serviceArea).toContain("新田鄉鄉郊區")
+    expect(kamTin?.serviceArea).toContain("錦田鄉鄉郊區")
+    expect(kamTin?.serviceArea).toContain("八鄉鄉郊區")
+    expect(kamTin?.serviceArea).not.toContain("十八鄉鄉郊區")
+
+    const chan = directory.units.filter((unit) => unit.name === "元朗大會堂陳應祥紀念老人中心")
+    expect(chan).toHaveLength(1)
+    expect(chan[0]?.serviceArea).toContain("御豪山莊")
+    expect(chan[0]?.serviceArea).toContain("馬田路")
+    expect(chan[0]?.serviceArea).toContain("錦綉花園")
+  })
 })
 
 describe("territory coverage", () => {

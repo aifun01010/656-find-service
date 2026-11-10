@@ -244,7 +244,7 @@ def bad_keyword(tok: str) -> bool:
     return False
 
 
-def keywords_from_text(text: str) -> list[str]:
+def keywords_from_text(text: str, *, keep_places: bool = False) -> list[str]:
     found: set[str] = set()
     for match in PLACE_RE.finditer(text or ""):
         tok = match.group()
@@ -258,8 +258,13 @@ def keywords_from_text(text: str) -> list[str]:
         part = part.strip()
         if re.fullmatch(r"[\u4e00-\u9fff]{2,8}", part) and not bad_keyword(part):
             found.add(part)
-    # Longer, more specific names first.
-    return sorted(found, key=lambda s: (-len(s), s))[:120]
+    # Longer, more specific names first. Callers that must not drop an estate
+    # name can keep 邨 / 苑 / 花園 tokens that fall outside the cap.
+    ranked = sorted(found, key=lambda s: (-len(s), s))
+    if not keep_places:
+        return ranked[:120]
+    extra = [token for token in ranked[120:] if token.endswith(("邨", "苑", "花園"))]
+    return ranked[:120] + extra
 
 
 def infer_district(text: str) -> str:
@@ -427,6 +432,62 @@ def district_for_centre(group: str, address: str, name: str) -> str:
     return {"kt": "kt", "ssp": "ssp", "st": "st", "yl": "yl", "tm": "tm"}.get(group, "")
 
 
+_CONTINUATION_LABEL = re.compile(r"(?i)cont'?d|continued|續")
+
+
+def centre_name_key(name: str) -> str:
+    """Identity used to recognise another row of the same centre.
+
+    Spreadsheets repeat the full centre name for an extra service-area block.
+    A trailing Cont'd / 續 mark is not part of that identity.
+    """
+    text = _CONTINUATION_LABEL.sub("", name or "")
+    text = re.sub(r"[()（）]", "", text)
+    return squash(text)
+
+
+def is_continuation_label(centre_raw: str) -> bool:
+    return _CONTINUATION_LABEL.search(centre_raw or "") is not None
+
+
+def split_area(area_raw: str) -> tuple[str, str]:
+    text = deprivate(area_raw)
+    zh = "\n".join(zh_lines(text))
+    en = "\n".join(
+        line.strip()
+        for line in text.splitlines()
+        if line.strip() and not re.search(r"[\u4e00-\u9fff]", line)
+    )
+    return zh, en
+
+
+def merge_area_text(unit: dict, zh: str, en: str) -> None:
+    """Append a later service-area block without dropping the earlier one."""
+    current_zh = unit.get("serviceArea") or ""
+    current_en = unit.get("searchText") or ""
+    if zh and zh not in current_zh:
+        unit["serviceArea"] = (current_zh + "\n" + zh).strip()
+    if en and en not in current_en:
+        unit["searchText"] = (current_en + "\n" + en).strip()
+    unit["keywords"] = keywords_from_text(
+        (unit.get("serviceArea") or "") + "\n" + (unit.get("searchText") or ""),
+        keep_places=True,
+    )
+
+
+def find_same_centre(units: list[dict], name: str, address: str) -> dict | None:
+    key = centre_name_key(name)
+    address_key = squash(address)
+    if not key or not address_key:
+        return None
+    for unit in reversed(units):
+        if centre_name_key(unit.get("name") or "") != key:
+            continue
+        if squash(unit.get("address") or "") == address_key:
+            return unit
+    return None
+
+
 def source_for_centre(district: str) -> dict[str, str]:
     mapping = {
         "cw": ("中西南及離島區長者中心服務範圍", f"{SWD}/storage/asset/section/733/CWSI_Service_boundary_of_Elderly_Centre.pdf"),
@@ -446,95 +507,99 @@ def source_for_centre(district: str) -> dict[str, str]:
     }
 
 
+def units_from_centre_table(rows: list[list], group: str, pdf: str = "", filename: str = "") -> list[dict]:
+    """Read one elderly-centre sheet.
+
+    A centre can occupy several rows. Rows marked Cont'd / 續, and later rows
+    that repeat the same centre name and the same address, are extra service-area
+    blocks and stay on that one unit. A repeated name with a different address
+    is a separate unit.
+    """
+    header_row = None
+    headers: list[str] = []
+    for r, row in enumerate(rows[:10]):
+        vals = [str(cell) for cell in row]
+        if any("Centre" in value for value in vals) and any("Address" in value for value in vals):
+            header_row = r
+            headers = vals
+            break
+    if header_row is None:
+        raise RuntimeError(f"no header in {filename or 'centre sheet'}")
+
+    def col(*names: str) -> int:
+        for i, header in enumerate(headers):
+            if any(name.lower() in header.lower() for name in names):
+                return i
+        raise RuntimeError(f"{filename or 'centre sheet'} missing {names}")
+
+    i_agency = col("Agency")
+    i_centre = col("Centre")
+    i_type = col("Type of Centre", "Type")
+    i_addr = col("Address")
+    i_tel = col("Tel")
+    i_area = col("Service Area")
+    units: list[dict] = []
+    previous = None
+    for r in range(header_row + 2, len(rows)):
+        row = rows[r]
+
+        def cell(index: int) -> str:
+            return str(row[index]) if index < len(row) and row[index] is not None else ""
+
+        centre_raw = cell(i_centre)
+        area_raw = deprivate(cell(i_area))
+        name = first_zh(centre_raw) or squash(centre_raw)
+        address = join_zh(cell(i_addr)) or squash(cell(i_addr))
+        zh_area, en_area = split_area(area_raw)
+        if is_continuation_label(centre_raw):
+            target = find_same_centre(units, name, address) or previous
+            if target is not None:
+                merge_area_text(target, zh_area, en_area)
+                previous = target
+            continue
+        if not name or name in {"中心", "Centre"}:
+            continue
+        existing = find_same_centre(units, name, address)
+        if existing is not None:
+            merge_area_text(existing, zh_area, en_area)
+            previous = existing
+            continue
+        type_raw = cell(i_type)
+        kind = "decc" if ("地區中心" in type_raw or "District Elderly" in type_raw) else "nec"
+        district = district_for_centre(group, address, name)
+        nums = phones_in(cell(i_tel))
+        phone = nums[0] if nums else ""
+        src = {
+            "sourceTitle": "長者地區中心及長者鄰舍中心服務範圍",
+            "sourceUrl": pdf or f"{SWD}/tc/pubsvc/elderly/elderly_info/susa/su_csse/",
+            "sourcePage": f"{SWD}/tc/pubsvc/elderly/elderly_info/susa/su_csse/",
+        }
+        unit = {
+            "id": sid("centre", district, name, address[:24]),
+            "type": kind,
+            "name": name,
+            "operator": first_zh(cell(i_agency)) or squash(cell(i_agency)),
+            "district": district,
+            "address": address,
+            "phone": phone,
+            "hours": "",
+            "serviceArea": zh_area,
+            "searchText": en_area,
+            "keywords": keywords_from_text(zh_area + "\n" + en_area, keep_places=True),
+            "mapUrl": "",
+            **src,
+        }
+        units.append(unit)
+        previous = unit
+    return units
+
+
 def parse_centres() -> list[dict]:
-    specs = discover_centre_workbooks()
     units = []
-    for spec in specs:
+    for spec in discover_centre_workbooks():
         filename = spec["file"]
-        group = spec["group"]
         rows = read_table(CACHE / filename)
-        header_row = None
-        headers: list[str] = []
-        for r, row in enumerate(rows[:10]):
-            vals = [str(cell) for cell in row]
-            if any("Centre" in value for value in vals) and any("Address" in value for value in vals):
-                header_row = r
-                headers = vals
-                break
-        if header_row is None:
-            raise RuntimeError(f"no header in {filename}")
-
-        def col(*names: str) -> int:
-            for i, header in enumerate(headers):
-                if any(name.lower() in header.lower() for name in names):
-                    return i
-            raise RuntimeError(f"{filename} missing {names}")
-
-        i_agency = col("Agency")
-        i_centre = col("Centre")
-        i_type = col("Type of Centre", "Type")
-        i_addr = col("Address")
-        i_tel = col("Tel")
-        i_area = col("Service Area")
-        previous = None
-        for r in range(header_row + 2, len(rows)):
-            row = rows[r]
-            def cell(index: int) -> str:
-                return str(row[index]) if index < len(row) and row[index] is not None else ""
-
-            centre_raw = cell(i_centre)
-            area_raw = deprivate(cell(i_area))
-            if "Cont'd" in centre_raw or "續" in centre_raw:
-                if previous is not None:
-                    extra_zh = join_zh(area_raw)
-                    extra_en = "\n".join(
-                        line.strip()
-                        for line in area_raw.splitlines()
-                        if line.strip() and not re.search(r"[\u4e00-\u9fff]", line)
-                    )
-                    if extra_zh:
-                        previous["serviceArea"] = (previous["serviceArea"] + "\n" + extra_zh).strip()
-                    if extra_en:
-                        previous["searchText"] = (previous["searchText"] + "\n" + extra_en).strip()
-                    previous["keywords"] = keywords_from_text(
-                        previous["serviceArea"] + "\n" + previous["searchText"]
-                    )
-                continue
-            name = first_zh(centre_raw) or squash(centre_raw)
-            if not name or name in {"中心", "Centre"}:
-                continue
-            address = join_zh(cell(i_addr)) or squash(cell(i_addr))
-            type_raw = cell(i_type)
-            kind = "decc" if ("地區中心" in type_raw or "District Elderly" in type_raw) else "nec"
-            district = district_for_centre(group, address, name)
-            nums = phones_in(cell(i_tel))
-            phone = nums[0] if nums else ""
-            zh_area = "\n".join(zh_lines(area_raw))
-            en_area = "\n".join(
-                line.strip() for line in area_raw.splitlines() if line.strip() and not re.search(r"[\u4e00-\u9fff]", line)
-            )
-            src = {
-                "sourceTitle": "長者地區中心及長者鄰舍中心服務範圍",
-                "sourceUrl": spec.get("pdf") or f"{SWD}/tc/pubsvc/elderly/elderly_info/susa/su_csse/",
-                "sourcePage": f"{SWD}/tc/pubsvc/elderly/elderly_info/susa/su_csse/",
-            }
-            unit = {
-                "id": sid("centre", district, name, address[:24]),
-                "type": kind,
-                "name": name,
-                "operator": first_zh(cell(i_agency)) or squash(cell(i_agency)),
-                "district": district,
-                "address": address,
-                "phone": phone,
-                "hours": "",
-                "serviceArea": zh_area,
-                "searchText": en_area,
-                "keywords": keywords_from_text(zh_area + "\n" + en_area),
-                "mapUrl": "",
-                **src,
-            }
-            units.append(unit)
-            previous = unit
+        units.extend(units_from_centre_table(rows, spec["group"], spec.get("pdf") or "", filename))
     return units
 
 
@@ -1354,6 +1419,9 @@ def dedupe_units(units: list[dict]) -> list[dict]:
             kept[key] = unit
             order.append(key)
             continue
+        # Home-support parsing can emit two chunks for one team. Keep the
+        # chunk with more keywords. Elderly-centre rows are combined earlier,
+        # in units_from_centre_table, so they do not rely on this.
         if len(unit.get("keywords") or []) > len(previous.get("keywords") or []):
             kept[key] = unit
     return [kept[key] for key in order]
