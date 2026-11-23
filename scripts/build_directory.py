@@ -17,6 +17,7 @@ import subprocess
 import time
 import urllib.parse
 import urllib.request
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import pymupdf
@@ -1455,6 +1456,21 @@ def validate_units(units: list[dict]) -> None:
         print("MSSU still without district:", blank)
 
 
+HKT = timezone(timedelta(hours=8))
+
+
+def rebuild_timestamp(now: datetime | None = None) -> str:
+    """Hong Kong time of this directory rebuild.
+
+    Written only when the directory is generated. This is not an HTTP
+    Last-Modified header and not a source-patrol check time.
+    """
+    moment = datetime.now(HKT) if now is None else now
+    if moment.tzinfo is None:
+        raise ValueError("rebuild timestamp requires a timezone-aware datetime")
+    return moment.astimezone(HKT).isoformat(timespec="seconds")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--geocode", action="store_true", help="Fill coordinates via Nominatim, then Photon")
@@ -1487,6 +1503,7 @@ def main() -> None:
     directory = {
         "title": "搵服務",
         "generatedFrom": "社會福利署公開名冊",
+        "rebuiltAt": rebuild_timestamp(),
         "disclaimer": "本網站是非官方查詢工具，不是社會福利署、醫院管理局或任何資助機構的官方網站。資料整理自社署公開名單，只供查詢參考，不是福利申請的決定，亦不是法律意見。街號單雙數等服務範圍細節，請向單位或對照來源文件確認。",
         "districts": DISTRICTS,
         "sources": [

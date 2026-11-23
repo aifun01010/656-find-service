@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import unittest
+from datetime import datetime, timedelta, timezone
 
 import build_directory as build
 
@@ -116,6 +117,29 @@ class CentreRowMergeTests(unittest.TestCase):
         self.assertIn("鳳庭苑", keywords)
         self.assertIn("華麗苑", keywords)
         self.assertNotIn("朗善邨", build.keywords_from_text(text))
+
+
+class RebuildTimestampTests(unittest.TestCase):
+    def test_stamp_converts_to_hong_kong_time(self) -> None:
+        moment = datetime(2026, 11, 10, 13, 39, 38, tzinfo=timezone.utc)
+        self.assertEqual(build.rebuild_timestamp(moment), "2026-11-10T21:39:38+08:00")
+
+    def test_stamp_keeps_an_existing_hong_kong_offset(self) -> None:
+        moment = datetime(2026, 11, 10, 21, 39, 38, tzinfo=build.HKT)
+        self.assertEqual(build.rebuild_timestamp(moment), "2026-11-10T21:39:38+08:00")
+
+    def test_naive_datetime_is_rejected(self) -> None:
+        with self.assertRaises(ValueError):
+            build.rebuild_timestamp(datetime(2026, 11, 10, 21, 39, 38))
+
+    def test_default_stamp_is_the_current_hong_kong_time(self) -> None:
+        before = datetime.now(build.HKT).replace(microsecond=0)
+        stamp = build.rebuild_timestamp()
+        after = datetime.now(build.HKT)
+        parsed = datetime.fromisoformat(stamp)
+        self.assertEqual(parsed.utcoffset(), timedelta(hours=8))
+        self.assertGreaterEqual(parsed, before)
+        self.assertLessEqual(parsed, after)
 
 
 if __name__ == "__main__":

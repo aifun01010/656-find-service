@@ -64,6 +64,8 @@ export type Example = {
 export type Directory = {
   title: string
   generatedFrom: string
+  /** ISO 8601 time with offset. When this directory was last rebuilt, in Hong Kong time. */
+  rebuiltAt: string
   disclaimer: string
   districts: District[]
   sources: SourceLink[]

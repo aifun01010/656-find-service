@@ -61,6 +61,8 @@ npm run build
 python3 scripts/build_directory.py --geocode
 ```
 
+這次重建會把當時的香港時間寫入 `directory.json` 的 `rebuiltAt`。頁面上的「最後重建」用這個時間，不用來源巡查的 HTTP `Last-Modified`。
+
 `--geocode` 會用 Nominatim（失敗時才用 Photon）為尚未有座標的單位補座標，並遵守大約每秒一次的查詢節奏。已核對過的座標會保留。瀏覽器搜尋時先用這些預先座標；只有沒有預先座標、或名冊對不上的地名，才會由瀏覽器把地名送到 OpenStreetMap Nominatim。那個請求不會經過本網站的伺服器。定位失敗時，結果仍列出地址，並標明「未有地圖座標」。瀏覽器不能自訂 User-Agent。
 
 地圖圖磚來自 OpenStreetMap。
@@ -85,7 +87,7 @@ python3 scripts/build_directory.py --geocode
 
 ## 限制
 
-- 資料會過時。電話、地址和服務範圍以社署最新文件為準。
+- 資料會過時。電話、地址和服務範圍以社署最新文件為準。公開頁「資料來源」顯示的是名冊最後重建的時間（香港時間），不是上次巡查時間，也不是 Live 發佈時間。名冊要重建並更新 Live 之後，網站上的內容才會改變。
 - 對上結果不是福利審批，也不是法律意見。
 - 街號分界，或名冊裡找不到的地名，要直接查來源文件。標了「唔喺本站名冊」的是公開地圖補查，不是本站名冊的命中。只選地區而列出的單位仍屬本站名冊。
 - 請勿將本網站表述為社會福利署、醫院管理局或其他機構的官方產品。
@@ -101,4 +103,4 @@ npm install
 npm run dev
 ```
 
-Open <http://127.0.0.1:43123>. The live site is <https://find-service-wod.pages.dev> (`find-service.pages.dev` was already taken). The build still outputs the site root `/`. Find Service helps carers look up a subsidised elderly-service contact. An estate or building is treated as living at home, a hospital as medical social work, and a residential care home as an integrated family service centre. It is **not** an official Social Welfare Department, Hospital Authority, or agency site. Embedded data comes from the public SWD lists for elderly centres, medical social work units, integrated family service centres, and home support teams across Hong Kong. Matches are by place name, not a legal reading of street-number boundaries. Not legal or welfare advice. If a place is not in the bundled directory, the page may ask OpenStreetMap Nominatim for a district and labels those suggestions as outside this site's directory. `python3 scripts/check_sources.py` reports whether the public source links changed and whether a file behind the same URL was replaced, using HTTP Last-Modified, ETag, and Content-Length. The active light check runs each weekday evening (about 21:00 HKT) outside this repo, in that same style, including those HEAD headers for file-swap detection. A change notifies the owner only and never auto-rebuilds the directory or changes Live. The owner schedules further checks as needed. This repository does not define a cloud cron. `python3 -m unittest discover -s scripts -p 'test_*.py'` checks the comparison logic without contacting SWD.
+Open <http://127.0.0.1:43123>. The live site is <https://find-service-wod.pages.dev> (`find-service.pages.dev` was already taken). The build still outputs the site root `/`. Find Service helps carers look up a subsidised elderly-service contact. An estate or building is treated as living at home, a hospital as medical social work, and a residential care home as an integrated family service centre. It is **not** an official Social Welfare Department, Hospital Authority, or agency site. Embedded data comes from the public SWD lists for elderly centres, medical social work units, integrated family service centres, and home support teams across Hong Kong. Matches are by place name, not a legal reading of street-number boundaries. Not legal or welfare advice. If a place is not in the bundled directory, the page may ask OpenStreetMap Nominatim for a district and labels those suggestions as outside this site's directory. `python3 scripts/check_sources.py` reports whether the public source links changed and whether a file behind the same URL was replaced, using HTTP Last-Modified, ETag, and Content-Length. The active light check runs each weekday evening (about 21:00 HKT) outside this repo, in that same style, including those HEAD headers for file-swap detection. A change notifies the owner only and never auto-rebuilds the directory or changes Live. The owner schedules further checks as needed. This repository does not define a cloud cron. `python3 -m unittest discover -s scripts -p 'test_*.py'` checks the comparison logic without contacting SWD. The sources section shows when the bundled directory was last rebuilt, in Hong Kong time (`rebuiltAt`), not when Live was published. `scripts/build_directory.py` writes that stamp on a real rebuild. It is not a last-check time and does not use HTTP Last-Modified from the source patrol. The directory on the site changes only after a rebuild and a Live update.

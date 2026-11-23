@@ -4,6 +4,7 @@ import { MapPanel } from "./components/MapPanel.tsx"
 import type { MapPoint } from "./components/MapPanel.tsx"
 import { geocodePlace } from "./lib/geocode.ts"
 import type { GeocodeHit } from "./lib/geocode.ts"
+import { formatRebuiltAt } from "./lib/rebuiltAt.ts"
 import { TYPE_LABEL, directory, districtIdFromText, districtName, relevantSources, searchDirectory, suggestPlaces } from "./lib/search.ts"
 import type { Example, Living, Mode, SearchOutput } from "./lib/types.ts"
 
@@ -403,7 +404,10 @@ export default function App() {
 
         <section className="sources">
           <h2>資料來源</h2>
-          <p>{directory.coverageNote} 電話和地址以社署最新文件為準，本工具不會自動更新。</p>
+          <p>{directory.coverageNote}</p>
+          <p>
+            本網站名冊最後於<time dateTime={directory.rebuiltAt}>{formatRebuiltAt(directory.rebuiltAt)}</time>重建。本網站會定時檢查社署文件是否更新；名冊不會自動更改，確認後才會重建並發佈，可能會有延遲，以社署最新文件為準。
+          </p>
           <SourceList sources={directory.sources} />
         </section>
       </div>
