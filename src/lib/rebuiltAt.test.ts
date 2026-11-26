@@ -21,9 +21,9 @@ describe("formatRebuiltAt", () => {
 })
 
 describe("shipped directory rebuild time", () => {
-  it("is the Live rebuild from 10 November 2026, with no last-check field", () => {
-    expect(directory.rebuiltAt).toBe("2026-11-10T21:39:38+08:00")
-    expect(formatRebuiltAt(directory.rebuiltAt)).toBe("2026年11月10日 21:39（香港時間）")
+  it("is the bundled rebuild on 26 November 2026, with no last-check field", () => {
+    expect(directory.rebuiltAt).toBe("2026-11-26T00:57:52+08:00")
+    expect(formatRebuiltAt(directory.rebuiltAt)).toBe("2026年11月26日 00:57（香港時間）")
     expect("checkedAt" in directory).toBe(false)
     expect("lastCheckedAt" in directory).toBe(false)
   })

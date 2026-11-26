@@ -119,6 +119,36 @@ class CentreRowMergeTests(unittest.TestCase):
         self.assertNotIn("朗善邨", build.keywords_from_text(text))
 
 
+class SameLineBulletTests(unittest.TestCase):
+    def test_same_line_hyphen_matches_a_bullet_on_its_own_line(self) -> None:
+        own_line = "街道\n-\n甘道西段\n-\n沙田海海岸\n"
+        same_line = "街道\n- 甘道西段\n- 沙田海海岸\n"
+        own = build.keywords_from_text(own_line)
+        same = build.keywords_from_text(same_line)
+        self.assertEqual(same, own)
+        self.assertIn("甘道西段", same)
+        self.assertIn("沙田海海岸", same)
+
+    def test_other_dash_bullets_on_the_same_line_are_names(self) -> None:
+        text = "– 甘道西段\n— 沙田海海岸\n• 飛鵝山\n"
+        keywords = build.keywords_from_text(text)
+        self.assertIn("甘道西段", keywords)
+        self.assertIn("沙田海海岸", keywords)
+        self.assertIn("飛鵝山", keywords)
+
+    def test_same_line_bullet_still_drops_street_numbers(self) -> None:
+        text = "- 東邊街\n- 由23A號起\n- （單數：由23A 號起）\n"
+        keywords = build.keywords_from_text(text)
+        self.assertIn("東邊街", keywords)
+        self.assertFalse(any(any(ch.isdigit() for ch in token) or "號" in token for token in keywords))
+
+    def test_direction_words_stay_blocked_after_the_bullet_is_removed(self) -> None:
+        keywords = build.keywords_from_text("- 沿東海岸線\n- 至銀灣止\n- 甘道西段\n")
+        self.assertIn("甘道西段", keywords)
+        self.assertNotIn("沿東海岸線", keywords)
+        self.assertNotIn("至銀灣止", keywords)
+
+
 class RebuildTimestampTests(unittest.TestCase):
     def test_stamp_converts_to_hong_kong_time(self) -> None:
         moment = datetime(2026, 11, 10, 13, 39, 38, tzinfo=timezone.utc)
