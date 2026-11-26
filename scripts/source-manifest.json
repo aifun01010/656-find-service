@@ -61,7 +61,7 @@
     ],
     "ifsc": [
       "https://www.swd.gov.hk/storage/asset/section/643/tc/C%26IIFSC_Service%20Boundary%20(Oct%202024).pdf",
-      "https://www.swd.gov.hk/storage/asset/section/643/tc/HSIFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/HSIFSC_Service%20Boundary%20(Nov%202026).pdf",
       "https://www.swd.gov.hk/storage/asset/section/643/tc/AIFSC_Service%20Boundary%20(Oct%202024).pdf",
       "https://www.swd.gov.hk/storage/asset/section/643/tc/CMAC%20G%26JIFSC_Service%20Boundary%20(Oct%202024).pdf",
       "https://www.swd.gov.hk/storage/asset/section/643/tc/Caritas%20IFSC-Aberdeen_Service%20Boundary%20(Oct%202024).pdf",
@@ -102,7 +102,7 @@
       "https://www.swd.gov.hk/storage/asset/section/643/tc/HKCS%20Family%20Ties%20IFSC_Service%20Boundary%20(Oct%202024)_r_20250730.pdf",
       "https://www.swd.gov.hk/storage/asset/section/643/tc/ST(N)IFSC_Service%20Boundary%20(Oct%202024).pdf",
       "https://www.swd.gov.hk/storage/asset/section/643/tc/ST(S)IFSC_Service%20Boundary%20(Oct%202024).pdf",
-      "https://www.swd.gov.hk/storage/asset/section/643/tc/MOS(N)IFSC_Service%20Boundary%20(Oct%202024).pdf",
+      "https://www.swd.gov.hk/storage/asset/section/643/tc/MOS(N)IFSC_Service%20Boundary%20(Nov%202026).pdf",
       "https://www.swd.gov.hk/storage/asset/section/643/tc/MOS(S)IFSC_Service%20Boundary%20(May%202026).pdf",
       "https://www.swd.gov.hk/storage/asset/section/643/tc/Caritas%20IFSC-ST_Service%20Boundary%20(Oct%202024).pdf",
       "https://www.swd.gov.hk/storage/asset/section/643/tc/TP(S)IFSC_Service%20Boundary%20(Mar%202026).pdf",
@@ -285,10 +285,10 @@
       "etag": null,
       "contentLength": 91354
     },
-    "https://www.swd.gov.hk/storage/asset/section/643/tc/HSIFSC_Service%20Boundary%20(Oct%202024).pdf": {
-      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/HSIFSC_Service%20Boundary%20(Nov%202026).pdf": {
+      "lastModified": "Wed, 25 Nov 2026 02:12:20 GMT",
       "etag": null,
-      "contentLength": 314446
+      "contentLength": 264159
     },
     "https://www.swd.gov.hk/storage/asset/section/643/tc/ISSHK%20SSP(S)IFSC_Service%20Boundary%20(Oct%202024).pdf": {
       "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
@@ -306,7 +306,7 @@
       "contentLength": 216224
     },
     "https://www.swd.gov.hk/storage/asset/section/643/tc/KaiTIFSC_Service%20Boundary%20(Oct%202024).pdf": {
-      "lastModified": "Tue, 01 Apr 2025 02:20:06 GMT",
+      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
       "etag": null,
       "contentLength": 389682
     },
@@ -325,10 +325,10 @@
       "etag": null,
       "contentLength": 189373
     },
-    "https://www.swd.gov.hk/storage/asset/section/643/tc/MOS(N)IFSC_Service%20Boundary%20(Oct%202024).pdf": {
-      "lastModified": "Tue, 01 Apr 2025 02:19:57 GMT",
+    "https://www.swd.gov.hk/storage/asset/section/643/tc/MOS(N)IFSC_Service%20Boundary%20(Nov%202026).pdf": {
+      "lastModified": "Wed, 25 Nov 2026 02:12:20 GMT",
       "etag": null,
-      "contentLength": 223693
+      "contentLength": 190460
     },
     "https://www.swd.gov.hk/storage/asset/section/643/tc/MOS(S)IFSC_Service%20Boundary%20(May%202026).pdf": {
       "lastModified": "Thu, 28 May 2026 02:07:35 GMT",
@@ -496,7 +496,7 @@
       "contentLength": 65024
     },
     "https://www.swd.gov.hk/storage/asset/section/733/KCYTM_Service_boundary_of_Elderly_Centre.pdf": {
-      "lastModified": "Wed, 15 Jan 2025 08:24:17 GMT",
+      "lastModified": "Wed, 15 Jan 2025 08:24:14 GMT",
       "etag": null,
       "contentLength": 459622
     },
@@ -506,7 +506,7 @@
       "contentLength": 101888
     },
     "https://www.swd.gov.hk/storage/asset/section/733/TM_Service_boundary_of_Elderly_Centre.pdf": {
-      "lastModified": "Tue, 15 Apr 2025 08:15:04 GMT",
+      "lastModified": "Tue, 15 Apr 2025 08:15:01 GMT",
       "etag": null,
       "contentLength": 206509
     },
@@ -551,7 +551,7 @@
       "contentLength": 477688
     },
     "https://www.swd.gov.hk/storage/asset/section/733/tc/EW_Service_boundary_of_Elderly_Centre.xls": {
-      "lastModified": "Tue, 28 Oct 2025 08:08:50 GMT",
+      "lastModified": "Tue, 28 Oct 2025 08:08:48 GMT",
       "etag": null,
       "contentLength": 83456
     },

@@ -245,6 +245,12 @@ def bad_keyword(tok: str) -> bool:
     return False
 
 
+# A bullet on its own line is removed by the splitter. The November 2026
+# boundary PDFs put that bullet on the name's line ("- 甘道西段"). Strip it
+# before the Chinese-token check so both layouts yield the same name.
+_LEADING_BULLET = re.compile(r"^(?:[\-\u2010\u2011\u2012\u2013\u2014\u2212•·‧]+\s+)+")
+
+
 def keywords_from_text(text: str, *, keep_places: bool = False) -> list[str]:
     found: set[str] = set()
     for match in PLACE_RE.finditer(text or ""):
@@ -256,7 +262,7 @@ def keywords_from_text(text: str, *, keep_places: bool = False) -> list[str]:
         if not bad_keyword(tok):
             found.add(tok)
     for part in re.split(r"[、，,；;\n/（）()\[\]【】]+", text or ""):
-        part = part.strip()
+        part = _LEADING_BULLET.sub("", part.strip()).strip()
         if re.fullmatch(r"[\u4e00-\u9fff]{2,8}", part) and not bad_keyword(part):
             found.add(part)
     # Longer, more specific names first. Callers that must not drop an estate
